@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  --main-color: black;
+  --second-color: white;
+}
+
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
