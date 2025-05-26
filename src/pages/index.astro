@@ -1,5 +1,5 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Navigation from "../components/Navigation";
 import "../styles/global.css";
 ---
 
@@ -20,5 +20,46 @@ import "../styles/global.css";
 
   <body>
     <Navigation />
+    <header>
+      <section
+        id="#aboutme"
+        class="flex flex-col lg:justify-center items-center lg:my-28 my-10"
+      >
+        <h1
+          class="lg:text-4xl px-1.5 text-center text-2xl font-extralight tracking-[6px] uppercase text-[var(--accent-color)]"
+        >
+          Hi, I am an aspiring junior fronted developer
+        </h1>
+        <p
+          class="px-6 lg:my-8 my-6 text-[var(--second-color)] font-medium lg:px-8"
+        >
+          Hi, my name is Paweł and for the past two years I have been exploring
+          the world of frontend with great dedication. For me, web programming
+          is more than just learning - it is a passion that gives me great
+          satisfaction and a sense of continuous development. I systematically
+          expand my knowledge of web technologies such as HTML, CSS, JavaScript
+          and modern frameworks, because I believe that there is always
+          something new to discover in this field. For me, frontend has become
+          one of the few areas that I really put my whole heart into - I don't
+          just learn theory, but also create my own projects, experiment with
+          new solutions and try to develop both my technical skills and my sense
+          of aesthetics. I hope you find this place inspiring and that you find
+          something to enjoy here - be it knowledge, an idea or maybe even
+          motivation for your own actions. Have fun and make yourself
+          comfortable! ^^
+        </p>
+        <img
+          src="/images/animal.jpg"
+          alt="My person :D"
+          class="bg-cover rounded-full lg:my-12 lg:w-156 w-70"
+        />
+      </section>
+    </header>
+    <main>
+      <section id="#technology" class="flex flex-col items-center my-14">
+        <h2 class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl">Know technologies</h2>
+        <p class="text-[var(--second-color)] my-3 lg:my-5">Everything I use in my projects</p>
+      </section>
+    </main>
   </body>
 </html>
