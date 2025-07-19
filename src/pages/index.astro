@@ -1,5 +1,6 @@
 ---
 import Navigation from "../components/Navigation";
+import SkillCard from "../components/SkillCard";
 import "../styles/global.css";
 ---
 
@@ -19,7 +20,7 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <Navigation />
+    <Navigation client:only="react" />
     <header>
       <section
         id="#aboutme"
@@ -31,7 +32,7 @@ import "../styles/global.css";
           Hi, I am an aspiring junior fronted developer
         </h1>
         <p
-          class="px-6 lg:my-8 my-6 text-[var(--second-color)] font-medium lg:px-8"
+          class="px-6 lg:my-8 my-6 text-[var(--second-color)] font-medium lg:px-8 2xl:max-w-[80ch]"
         >
           Hi, my name is Paweł and for the past two years I have been exploring
           the world of frontend with great dedication. For me, web programming
@@ -57,8 +58,9 @@ import "../styles/global.css";
     </header>
     <main>
       <section id="#technology" class="flex flex-col items-center my-14">
-        <h2 class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl">Know technologies</h2>
+        <h2 class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2">Know technologies</h2>
         <p class="text-[var(--second-color)] my-3 lg:my-5">Everything I use in my projects</p>
+        <SkillCard client:only="react" />
       </section>
     </main>
   </body>

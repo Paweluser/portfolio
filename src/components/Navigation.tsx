@@ -6,7 +6,7 @@ interface NavLinks {
   label: string;
 }
 
-const UlLinks: NavLinks[] = [
+const ulLinks: NavLinks[] = [
   { label: "Home", path: "#" },
   { label: "About me", path: "#aboutme" },
   { label: "Technology", path: "#technology" },
@@ -15,11 +15,11 @@ const UlLinks: NavLinks[] = [
 
 export default function Navigation() {
   return (
-    <nav className="sticky top-0 py-6 mx-4">
+    <nav className="sticky top-0 py-6 bg-transparent backdrop-blur-md">
       <div className="container flex justify-between mx-auto">
         <GlobeAltIcon className="lg:w-14 w-12 text-[var(--accent-color)]" />
         <ul className="hidden lg:flex items-center space-x-5 xl:text-xl">
-          {UlLinks.map((item) => {
+          {ulLinks.map((item) => {
             return (
               <li
                 key={item.path}
