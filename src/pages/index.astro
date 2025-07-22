@@ -1,6 +1,8 @@
 ---
 import Navigation from "../components/Navigation";
+import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
+import WorkingCard from '../components/WorkingCard';
 import "../styles/global.css";
 ---
 
@@ -20,10 +22,10 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <Navigation client:only="react" />
+    <Navigation />
     <header>
       <section
-        id="#aboutme"
+        id="aboutme"
         class="flex flex-col lg:justify-center items-center lg:my-28 my-10"
       >
         <h1
@@ -57,10 +59,44 @@ import "../styles/global.css";
       </section>
     </header>
     <main>
-      <section id="#technology" class="flex flex-col items-center my-14">
-        <h2 class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2">Know technologies</h2>
-        <p class="text-[var(--second-color)] my-3 lg:my-5">Everything I use in my projects</p>
+      <section id="technology" class="flex flex-col items-center my-14">
+        <h2
+          class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
+        >
+          Know technologies
+        </h2>
+        <p class="text-[var(--second-color)] my-3 lg:my-5">
+          Everything I use in my projects
+        </p>
         <SkillCard client:only="react" />
+      </section>
+      <section id="projects" class="flex flex-col items-center my-24">
+        <h2
+          class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
+        >
+          All my projects
+        </h2>
+        <p class="text-[var(--second-color)] my-3 lg:my-5">
+          Here are some of the projects I've worked on
+        </p>
+        <div class="grid grid-cols-2 gap-3 w-full max-w-6xl">
+          <ProjectCard
+            title="Portfolio Page"
+            description="A modern, responsive portfolio website built using Astro, React and Tailwind CSS, designed to showcase web development skills and personal projects. The site features a clean UI, smooth animations, and optimized performance through Astro's static site generation. Tailwind CSS ensures consistent styling and full responsiveness across devices. The project highlights key technologies, recent work, and includes interactive sections such as a contact form and technology stack."
+            tags={["Astro", "Tailwind CSS", "React"]}
+          />
+          <ProjectCard
+            title="Calculator App"
+            description="A fully functional calculator application built using React and Vite, styled with CSS Modules. The project was developed to deepen understanding of component-driven development, state management, and modular styling. It handles basic arithmetic operations with real-time result updates. Vite ensures fast development and build times, while CSS Modules provide scoped and maintainable styling."
+            tags={["React", "Vite", "CSS Modules"]}
+            />
+          <ProjectCard
+            title="Password Generator"
+            description="A simple yet effective password generator built with React and Vite, styled using CSS Modules. The application allows users to generate strong, random passwords with a single click. It includes a copy-to-clipboard feature for convenience and offers a clean, responsive user interface. This project focuses on core React concepts like component state and event handling, while showcasing modular and maintainable styling through CSS Modules. It’s a lightweight tool designed to demonstrate practical frontend skills in a concise form."
+            tags={["React", "Vite", "CSS Modules"]}
+            />
+          <WorkingCard client:only="react" />
+        </div>
       </section>
     </main>
   </body>

@@ -5,6 +5,19 @@
   --second-color: #fdfffc;
   --third-colour: #4b5563;
   --accent-color: #2ec4b6;
+  --animate-wiggle: wiggle 100s infinite;
+  @keyframes wiggle {
+    50% {
+      transform: rotate(360deg);
+    },
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
 }
 
 body {
