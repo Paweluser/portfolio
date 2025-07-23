@@ -1,8 +1,9 @@
 ---
+import CourseCard from "../components/CourseCard";
 import Navigation from "../components/Navigation";
 import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
-import WorkingCard from '../components/WorkingCard';
+import WorkingCard from "../components/WorkingCard";
 import "../styles/global.css";
 ---
 
@@ -89,13 +90,29 @@ import "../styles/global.css";
             title="Calculator App"
             description="A fully functional calculator application built using React and Vite, styled with CSS Modules. The project was developed to deepen understanding of component-driven development, state management, and modular styling. It handles basic arithmetic operations with real-time result updates. Vite ensures fast development and build times, while CSS Modules provide scoped and maintainable styling."
             tags={["React", "Vite", "CSS Modules"]}
-            />
+          />
           <ProjectCard
             title="Password Generator"
-            description="A simple yet effective password generator built with React and Vite, styled using CSS Modules. The application allows users to generate strong, random passwords with a single click. It includes a copy-to-clipboard feature for convenience and offers a clean, responsive user interface. This project focuses on core React concepts like component state and event handling, while showcasing modular and maintainable styling through CSS Modules. It’s a lightweight tool designed to demonstrate practical frontend skills in a concise form."
+            description="A simple yet effective password generator built with React and Vite, styled using CSS Modules. The application allows users to generate strong, random passwords with a single click. It includes a copy-to-clipboard feature for convenience and offers a clean, responsive user interface. This project focuses on core React concepts like component state and event handling, while showcasing modular and maintainable styling through CSS Modules. It's a lightweight tool designed to demonstrate practical frontend skills in a concise form."
             tags={["React", "Vite", "CSS Modules"]}
-            />
+          />
           <WorkingCard client:only="react" />
+        </div>
+      </section>
+      <section id="courses" class="flex flex-col items-center my-14">
+        <h2
+          class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
+        >
+          Courses
+        </h2>
+        <p class="text-[var(--second-color)] my-3 lg:my-5">
+          All the courses i have completed
+        </p>
+        <div class="grid grid-cols-2 gap-3 w-full max-w-6xl">
+          <CourseCard title="Kurs “Zrozumieć React”" />
+          <CourseCard title="Kurs ”Next.js od podstaw. Pełen kurs”" />
+          <CourseCard title="Kurs ”Opanuj TypeScript: Core Pro & React pro”" />
+          <CourseCard title="Kurs ”JavaScript from MMC School”" />
         </div>
       </section>
     </main>
