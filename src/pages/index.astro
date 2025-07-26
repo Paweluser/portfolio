@@ -3,6 +3,7 @@ import CourseCard from "../components/CourseCard";
 import Navigation from "../components/Navigation";
 import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
+import Timeline from "../components/Timeline.astro";
 import WorkingCard from "../components/WorkingCard";
 import "../styles/global.css";
 ---
@@ -108,7 +109,8 @@ import "../styles/global.css";
         <p class="text-[var(--second-color)] my-3 lg:my-5">
           All the courses i have completed
         </p>
-        <div class="grid grid-cols-2 gap-3 w-full max-w-6xl">
+        <Timeline />
+        <div class="md:hidden grid grid-cols-2 gap-3 w-full max-w-6xl">
           <CourseCard title="Kurs “Zrozumieć React”" />
           <CourseCard title="Kurs ”Next.js od podstaw. Pełen kurs”" />
           <CourseCard title="Kurs ”Opanuj TypeScript: Core Pro & React pro”" />

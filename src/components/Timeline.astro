@@ -1,0 +1,32 @@
+---
+const events = [
+  { id: 1, text: "Kurs “Zrozumieć React”" },
+  { id: 2, text: "Kurs ”Next.js od podstaw. Pełen kurs”" },
+  { id: 3, text: "Kurs ”Opanuj TypeScript: Core Pro & React pro”" },
+  { id: 4, text: "Kurs ”JavaScript from MMC School”" },
+];
+
+import '../styles/global.css'
+---
+
+<div class="max-md:hidden relative w-full max-w-[800px] mx-auto mt-14">
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-[var(--accent-color)]"></div>
+  <ul class="flex flex-col mx-8 list-none">
+    {
+      events.map((event, index) => (
+        <li
+          class={`relative mb-8 p-4 w-1/2 border border-[var(--accent-color)] rounded-lg ${
+            index % 2 !== 0 ? 'self-end translate-x-[20px]' : 'self-start -translate-x-[20px]'
+          }`}
+        >
+          <div
+            class={`absolute top-[calc(50%-10px)] w-5 h-5 bg-[var(--accent-color)] rounded-full content-[''] ${
+              index % 2 !== 0 ? 'left-[-31px]' : 'right-[-31px]'
+            }`}
+          ></div>
+          <p class="text-[var(--second-color)] w-fit transition-colors duration-300 hover:text-[var(--accent-color)]">{event.text}</p>
+        </li>
+      ))
+    }
+  </ul>
+</div>
