@@ -24,19 +24,19 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <Navigation />
+    <Navigation client:only="react" />
     <header>
       <section
         id="aboutme"
-        class="flex flex-col lg:justify-center items-center lg:my-28 my-10"
+        class="flex flex-col lg:justify-center items-center lg:my-40 my-24 md:my-32"
       >
         <h1
-          class="lg:text-4xl px-1.5 text-center text-2xl font-extralight tracking-[6px] uppercase text-[var(--accent-color)]"
+          class="lg:text-4xl md:text-3xl md:px-3 px-1.5 text-center text-2xl font-extralight tracking-[6px] uppercase text-[var(--accent-color)]"
         >
           Hi, I am an aspiring junior fronted developer
         </h1>
         <p
-          class="px-6 lg:my-8 my-6 text-[var(--second-color)] font-medium lg:px-8 2xl:max-w-[80ch]"
+          class="px-6 lg:my-8 my-6 text-[var(--second-color)] font-medium lg:px-8 xl:max-w-[80ch]"
         >
           Hi, my name is Paweł and for the past two years I have been exploring
           the world of frontend with great dedication. For me, web programming
@@ -56,14 +56,14 @@ import "../styles/global.css";
         <img
           src="/images/animal.jpg"
           alt="My person :D"
-          class="bg-cover rounded-full lg:my-12 lg:w-156 w-70"
+          class="bg-cover rounded-full lg:my-12 lg:w-156 w-72 md:w-96"
         />
       </section>
     </header>
     <main>
       <section id="technology" class="flex flex-col items-center my-14">
         <h2
-          class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
+          class="text-[var(--accent-color)] text-center md:text-2xl text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
         >
           Know technologies
         </h2>
@@ -72,16 +72,18 @@ import "../styles/global.css";
         </p>
         <SkillCard client:only="react" />
       </section>
-      <section id="projects" class="flex flex-col items-center my-24">
+      <section id="projects" class="flex flex-col items-center my-14">
         <h2
-          class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
+          class="text-[var(--accent-color)] text-center md:text-2xl text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
         >
           All my projects
         </h2>
-        <p class="text-[var(--second-color)] my-3 lg:my-5">
+        <p class="text-[var(--second-color)] my-3 lg:my-5 max-sm:px-2">
           Here are some of the projects I've worked on
         </p>
-        <div class="grid grid-cols-2 gap-3 w-full max-w-6xl">
+        <div
+          class="grid grid-cols-2 max-sm:grid-cols-1 gap-3 w-full max-w-6xl"
+        >
           <ProjectCard
             title="Portfolio Page"
             description="A modern, responsive portfolio website built using Astro, React and Tailwind CSS, designed to showcase web development skills and personal projects. The site features a clean UI, smooth animations, and optimized performance through Astro's static site generation. Tailwind CSS ensures consistent styling and full responsiveness across devices. The project highlights key technologies, recent work, and includes interactive sections such as a contact form and technology stack."
@@ -97,12 +99,12 @@ import "../styles/global.css";
             description="A simple yet effective password generator built with React and Vite, styled using CSS Modules. The application allows users to generate strong, random passwords with a single click. It includes a copy-to-clipboard feature for convenience and offers a clean, responsive user interface. This project focuses on core React concepts like component state and event handling, while showcasing modular and maintainable styling through CSS Modules. It's a lightweight tool designed to demonstrate practical frontend skills in a concise form."
             tags={["React", "Vite", "CSS Modules"]}
           />
-          <WorkingCard client:only="react" />
+          <!-- <WorkingCard client:only="react" /> -->
         </div>
       </section>
       <section id="courses" class="flex flex-col items-center my-14">
         <h2
-          class="text-[var(--accent-color)] text-center text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
+          class="text-[var(--accent-color)] text-center md:text-2xl text-xl tracking-[6px] font-extralight lg:text-3xl uppercase px-2"
         >
           Courses
         </h2>
@@ -110,7 +112,7 @@ import "../styles/global.css";
           All the courses i have completed
         </p>
         <Timeline />
-        <div class="md:hidden grid grid-cols-2 gap-3 w-full max-w-6xl">
+        <div class="md:hidden grid grid-cols-1 gap-3 w-full max-w-6xl">
           <CourseCard title="Kurs “Zrozumieć React”" />
           <CourseCard title="Kurs ”Next.js od podstaw. Pełen kurs”" />
           <CourseCard title="Kurs ”Opanuj TypeScript: Core Pro & React pro”" />

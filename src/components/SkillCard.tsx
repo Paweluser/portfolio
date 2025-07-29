@@ -19,7 +19,7 @@ const skills = [
 
 export default function SkillCard() {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-10 mt-6">
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 max-sm:gap-8 gap-10 mt-6">
       {skills.map(({ name, icon }) => (
         <div
           key={name}
