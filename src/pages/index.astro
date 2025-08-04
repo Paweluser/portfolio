@@ -4,7 +4,7 @@ import CourseCard from "../components/CourseCard";
 import Navigation from "../components/Navigation";
 import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
-import Timeline from "../components/Timeline.astro";
+import Timeline from "../components/Timeline.tsx";
 import "../styles/global.css";
 ---
 
@@ -101,12 +101,24 @@ import "../styles/global.css";
         title="Courses"
         subtitle="All the courses I have completed"
       >
-        <Timeline />
+        <Timeline client:only="react" />
         <div class="md:hidden grid grid-cols-1 gap-3 w-full max-w-6xl">
-          <CourseCard title="Kurs 'Zrozumieć React'" />
-          <CourseCard title="Kurs 'Next.js od podstaw. Pełen kurs'" />
-          <CourseCard title="Kurs 'Opanuj TypeScript: Core Pro & React pro'" />
-          <CourseCard title="Kurs 'JavaScript from MMC School'" />
+          <CourseCard
+            title="Course ”JavaScript from MMC School”"
+            url="https://mmcschool.pl/kursy/kurs-javascript/"
+          />
+          <CourseCard
+            title="Course ”Understand React”"
+            url="https://zrozumreact.pl/"
+          />
+          <CourseCard
+            title="Course ”Next.js from Scratch - Complete Guide”"
+            url="https://www.udemy.com/course/nextjs-14-od-podstaw/?kw=next&src=sac&couponCode=MT40825"
+          />
+          <CourseCard
+            title="Course ”Master TypeScript - Core Pro & React Pro”"
+            url="https://opanujtypescript.pl/"
+          />
         </div>
       </SectionLayout>
     </main>

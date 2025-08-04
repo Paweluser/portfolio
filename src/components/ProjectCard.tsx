@@ -19,7 +19,7 @@ export default function ProjectCard({
 }: Props) {
   return (
     <div className="border-[var(--accent-color)] border-2 rounded-md m-4 p-4">
-      <p className="text-xl text-[var(--second-color)] duration-300 transition-colors hover:text-[var(--accent-color)] text-start w-fit">
+      <p className="text-xl md:text-2xl text-[var(--second-color)] duration-300 transition-colors hover:text-[var(--accent-color)] text-start w-fit">
         {title}
       </p>
       <p className="text-[var(--third-colour)] mt-2">{description}</p>
