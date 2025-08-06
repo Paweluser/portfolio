@@ -12,10 +12,10 @@ interface NavLinks {
 }
 
 const ulLinks: NavLinks[] = [
-  { label: "Home", path: "#" },
   { label: "About me", path: "#aboutme" },
   { label: "Technology", path: "#technology" },
   { label: "Projects", path: "#projects" },
+  { label: "Courses", path: "#courses" },
 ];
 
 export default function Navigation() {
@@ -32,7 +32,9 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full top-0 py-4 lg:py-6 bg-transparent backdrop-blur-md z-50">
       <div className="container flex justify-between mx-auto max-sm:px-2 md:px-4">
-        <GlobeAltIcon className="md:w-14 w-12 text-[var(--accent-color)]" />
+        <a href="#">
+          <GlobeAltIcon className="md:w-14 w-12 text-[var(--accent-color)] cursor-pointer" />
+        </a>
 
         {/* Desktop nav */}
         <ul className="hidden lg:flex items-center space-x-5 xl:text-xl">
