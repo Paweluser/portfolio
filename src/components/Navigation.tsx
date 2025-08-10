@@ -15,7 +15,7 @@ const ulLinks: NavLinks[] = [
   { label: "About me", path: "#aboutme" },
   { label: "Technology", path: "#technology" },
   { label: "Projects", path: "#projects" },
-  { label: "Courses", path: "#courses" },
+  { label: "Contact", path: "#contact" },
 ];
 
 export default function Navigation() {

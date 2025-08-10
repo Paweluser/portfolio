@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
 import Timeline from "../components/Timeline.tsx";
+import Form from "../components/Form";
 import "../styles/global.css";
 ---
 
@@ -24,7 +25,7 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <Navigation client:only="react" />
+    <Navigation client:load />
     <header>
       <section
         id="aboutme"
@@ -66,7 +67,7 @@ import "../styles/global.css";
         title="Know technologies"
         subtitle="Everything I use in my projects"
       >
-        <SkillCard client:only="react" />
+        <SkillCard client:load />
       </SectionLayout>
       <SectionLayout
         id="projects"
@@ -120,6 +121,9 @@ import "../styles/global.css";
             url="https://opanujtypescript.pl/"
           />
         </div>
+      </SectionLayout>
+      <SectionLayout id="contact" title="Contact" subtitle="Send a message">
+        <Form client:idle />
       </SectionLayout>
     </main>
   </body>
