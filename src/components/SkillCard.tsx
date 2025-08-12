@@ -15,11 +15,15 @@ const skills = [
   { name: "Playwright", icon: "simple-icons:playwright" },
   { name: "PostgreSQL", icon: "simple-icons:postgresql" },
   { name: "Bootstrap", icon: "simple-icons:bootstrap" },
+  { name: "Zod", icon: "simple-icons:zod" },
+  { name: "React Hook Form", icon: "simple-icons:reacthookform" },
+  { name: "Axios", icon: "simple-icons:axios" },
+  { name: "TanStack Query", icon: "simple-icons:reactquery" }
 ];
 
 export default function SkillCard() {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 max-sm:gap-8 gap-10 mt-6">
+    <div className="grid grid-cols-3 md:grid-cols-5 max-sm:gap-8 gap-10 mt-6">
       {skills.map(({ name, icon }) => (
         <div
           key={name}
@@ -30,7 +34,7 @@ export default function SkillCard() {
             className="lg:w-[120px] lg:h-[120px] max-sm:w-[60px] max-sm:h-[60px] sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] text-[var(--third-colour)] transition-colors duration-300 group-hover:text-[var(--accent-color)]"
             title={name}
           />
-          <span className="text-sm text-[var(--second-color)]">{name}</span>
+          <span className="text-sm text-center text-[var(--second-color)]">{name}</span>
         </div>
       ))}
     </div>

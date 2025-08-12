@@ -36,7 +36,6 @@ export default function Navigation() {
           <GlobeAltIcon className="md:w-14 w-12 text-[var(--accent-color)] cursor-pointer" />
         </a>
 
-        {/* Desktop nav */}
         <ul className="hidden lg:flex items-center space-x-5 xl:text-xl">
           {ulLinks.map((item) => (
             <li
@@ -48,7 +47,6 @@ export default function Navigation() {
           ))}
         </ul>
 
-        {/* Mobile toggle button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="relative md:w-14 w-12 px-3 py-2 lg:hidden cursor-pointer z-50"
@@ -71,7 +69,6 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile nav */}
       <div
         className={`fixed top-0 left-0 w-full h-screen bg-[var(--main-color)] z-40 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"

@@ -4,8 +4,9 @@ import CourseCard from "../components/CourseCard";
 import Navigation from "../components/Navigation";
 import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
-import Timeline from "../components/Timeline.tsx";
+import Timeline from "../components/Timeline";
 import Form from "../components/Form";
+import Footer from "../components/Footer";
 import "../styles/global.css";
 ---
 
@@ -15,6 +16,9 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Portfolio of Paweluser — frontend projects, skills, and contact." />
+    <meta name="keywords" content="frontend, portfolio, web development, HTML, CSS, JavaScript, React" />
+    <meta name="author" content="Paweł Pazyrski" />
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,12 +33,12 @@ import "../styles/global.css";
     <header>
       <section
         id="aboutme"
-        class="flex flex-col lg:justify-center items-center lg:my-40 my-24 md:my-32 scroll-mt-28"
+        class="flex flex-col lg:justify-center items-center my-24 md:my-32 scroll-mt-28"
       >
         <h1
           class="lg:text-4xl md:text-3xl md:px-3 px-1.5 text-center text-2xl font-extralight tracking-[6px] uppercase text-[var(--accent-color)]"
         >
-          Hi, I am an aspiring junior fronted developer
+          Hi, I am an aspiring junior frontend developer
         </h1>
         <p
           class="px-6 lg:my-8 my-6 text-[var(--second-color)] font-medium lg:px-8 xl:max-w-[80ch]"
@@ -56,6 +60,7 @@ import "../styles/global.css";
         </p>
         <img
           src="/images/animal.jpg"
+          loading="lazy"
           alt="My person :D"
           class="bg-cover rounded-full lg:my-12 lg:w-156 w-72 md:w-96"
         />
@@ -67,7 +72,7 @@ import "../styles/global.css";
         title="Know technologies"
         subtitle="Everything I use in my projects"
       >
-        <SkillCard client:load />
+        <SkillCard client:visible />
       </SectionLayout>
       <SectionLayout
         id="projects"
@@ -78,7 +83,7 @@ import "../styles/global.css";
           <ProjectCard
             title="Portfolio Page"
             description="A modern, responsive portfolio website built using Astro, React and Tailwind CSS, designed to showcase web development skills and personal projects. The site features a clean UI, smooth animations, and optimized performance through Astro's static site generation. Tailwind CSS ensures consistent styling and full responsiveness across devices. The project highlights key technologies, recent work, and includes interactive sections such as a contact form and technology stack."
-            tags={["Astro", "Tailwind CSS", "React", "TypeScript"]}
+            tags={["Astro", "Tailwind CSS", "React", "TypeScript", "Zod", "React Hook Form"]}
             projectUrl="https://github.com/Paweluser/portfolio"
           />
           <ProjectCard
@@ -100,9 +105,9 @@ import "../styles/global.css";
       <SectionLayout
         id="courses"
         title="Courses"
-        subtitle="All the courses I have completed"
+        subtitle="The most important courses I have completed"
       >
-        <Timeline client:only="react" />
+        <Timeline client:idle />
         <div class="md:hidden grid grid-cols-1 gap-3 w-full max-w-6xl">
           <CourseCard
             title="Course ”JavaScript from MMC School”"
@@ -126,5 +131,6 @@ import "../styles/global.css";
         <Form client:idle />
       </SectionLayout>
     </main>
+    <Footer />
   </body>
 </html>

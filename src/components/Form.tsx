@@ -41,7 +41,7 @@ export default function Form() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="w-full max-w-xl space-y-4 px-4"
+      className="w-full max-w-xl md:max-w-2xl space-y-4 px-4"
     >
       <div>
         <label
@@ -122,7 +122,7 @@ export default function Form() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-[var(--main-color)] text-[var(--second-color)] border-[var(--second-color)] border-[1px] px-4 py-2 rounded-md text-sm font-medium duration-300 transition-colors hover:bg-[var(--accent-color)] hover:text-[var(--main-color)]"
+        className="bg-[var(--main-color)] text-[var(--second-color)] border-[var(--second-color)] border-[1px] px-4 py-2 rounded-md text-sm font-medium duration-300 transition-colors hover:bg-[var(--accent-color)] hover:text-[var(--main-color)] cursor-pointer"
       >
         {isSubmitting ? "Sending…" : "Send message"}
       </button>
