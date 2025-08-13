@@ -9,6 +9,7 @@ const skills = [
   { name: "React", icon: "simple-icons:react" },
   { name: "Next.js", icon: "simple-icons:nextdotjs" },
   { name: "Astro", icon: "simple-icons:astro" },
+  { name: "Vite", icon: "simple-icons:vite" },
   { name: "Tailwind CSS", icon: "simple-icons:tailwindcss" },
   { name: "SASS", icon: "simple-icons:sass" },
   { name: "Git", icon: "simple-icons:git" },
